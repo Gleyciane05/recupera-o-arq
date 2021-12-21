@@ -1,0 +1,6 @@
+Public Class Cadin
+    Public Function EstaNoCadin(cliente As Cliente) As Boolean
+        Console.WriteLine("Verificando o CADIN para o cliente " & Convert.ToString(cliente.Nome))
+        Return False
+    End Function
+End Class
