@@ -1,0 +1,3 @@
+class ConcreteStrategySubtract implements Strategy 
+    method execute(a, b) is
+        return a - b
