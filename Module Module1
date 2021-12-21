@@ -1,0 +1,16 @@
+Module Module1
+
+    Sub Main()
+        Dim concedeCredito As New Facade()
+
+        Dim cliente1 As New Cliente("Macoratti")
+
+        Dim resultado As Boolean = concedeCredito.ConcederEmprestimo(cliente1, 199000.0)
+
+        Console.WriteLine("O empréstimo pleiteado pelo cliente " + cliente1.Nome & " foi  " & (If(resultado, "Aprovado", "Negado")))
+
+        Console.ReadKey()
+
+    End Sub
+
+End Module
