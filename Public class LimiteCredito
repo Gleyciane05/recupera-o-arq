@@ -1,0 +1,10 @@
+Public Class LimiteCredito
+    Public Function PossuiLimiteCredito(cliente As Cliente, valor As Double) As Boolean
+        Console.WriteLine("Verificando o limite de crédito do cliente " & Convert.ToString(cliente.Nome))
+        If valor > 200000.0 Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
+End Class
