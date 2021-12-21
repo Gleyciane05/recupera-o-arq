@@ -1,0 +1,14 @@
+Public Class Cliente
+	Public Property Nome() As String
+		Get
+			Return m_Nome
+		End Get
+		Set
+			m_Nome = Value
+		End Set
+	End Property
+	Private m_Nome As String
+	Public Sub New(_nome As String)
+		Nome = _nome
+	End Sub
+End Class
