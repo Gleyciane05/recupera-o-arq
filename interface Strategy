@@ -1,0 +1,2 @@
+interface Strategy is
+    method execute(a, b)
