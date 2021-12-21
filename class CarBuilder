@@ -1,0 +1,21 @@
+class CarBuilder implements Builder is
+    private field car:Car
+
+    constructor CarBuilder() is
+        this.reset()
+        
+    method reset() is
+        this.car = new Car()
+
+    method setSeats(...) is
+
+    method setEngine(...) is
+       
+    method setTripComputer(...) is        
+
+    method setGPS(...) is     
+
+    method getProduct():Car is
+        product = this.car
+        this.reset()
+        return product
