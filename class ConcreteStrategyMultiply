@@ -1,0 +1,3 @@
+class ConcreteStrategyMultiply implements Strategy 
+    method execute(a, b) is
+        return a * b
