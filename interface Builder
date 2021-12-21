@@ -1,1 +1,6 @@
 interface Builder is
+ method reset()
+    method setSeats(...)
+    method setEngine(...)
+    method setTripComputer(...)
+    method setGPS(...)
