@@ -1,0 +1,9 @@
+class Context 
+
+    private strategy: Strategy
+    
+    method setStrategy(Strategy strategy) 
+        this.strategy = strategy
+
+    method executeStrategy(int a, int b) 
+        return strategy.execute(a, b)
