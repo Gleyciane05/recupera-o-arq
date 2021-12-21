@@ -1,0 +1,3 @@
+class ConcreteStrategyAdd implements Strategy 
+    method execute(a, b) is
+        return a + b
