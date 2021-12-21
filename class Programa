@@ -1,0 +1,14 @@
+using static System.Console;
+  class Programa {
+    static void Main(string[] args) {
+      Console.WriteLine("Padrão Adapter - Fluent Interface");
+      var emailBuilder = new EmailBuilder();
+      var email = emailBuilder.To("gleyce.araujo2018@gmail.com")
+      .From("teste@email.com")
+      .Subject("Assunto do email")
+      .Body("teste envio")
+      .Build();
+   WriteLine(${email.From} /n {email.To} /n {email.Subject} /n {email.Bdy}");
+   RedLine();
+   }
+ }
