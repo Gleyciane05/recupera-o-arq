@@ -1,0 +1,19 @@
+class CarManualBuilder implements Builder is
+    private field manual:Manual
+
+    constructor CarManualBuilder() is
+        this.reset()
+
+    method reset() is
+        this.manual = new Manual()
+
+    method setSeats(...) is     
+
+    method setEngine(...) is        
+
+    method setTripComputer(...) is      
+
+    method setGPS(...) is      
+
+    method getProduct():Manual is       
+
