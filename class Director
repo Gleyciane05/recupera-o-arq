@@ -1,0 +1,17 @@
+class Director is
+    private field builder:Builder
+    
+    method setBuilder(builder:Builder)
+        this.builder = builder
+
+    method constructSportsCar(builder: Builder) is
+        builder.reset()
+        builder.setSeats(2)
+        builder.setEngine(new SportEngine())
+        builder.setTripComputer(true)
+        builder.setGPS(true)
+
+    method constructSUV(builder: Builder) is
+      
+
+
