@@ -1,0 +1,24 @@
+Public Class Facade
+		Private limite As New LimiteCredito()
+		Private serasa As New Serasa()
+		Private cadin As New Cadin()
+
+		Public Function ConcederEmprestimo(cliente As Cliente, valor As Double) As Boolean
+			Console.WriteLine("{0} esta pleitando um empréstimo no valor de {1:C}" & vbLf, cliente.Nome, valor)
+
+			Dim ConcederEmprestimo As Boolean = True
+
+			If serasa.EstaNoSerasa(cliente) Then
+				Console.WriteLine("Cliente " & Convert.ToString(cliente.Nome) & " possui restrição no SERASA")
+				ConcederEmprestimo = False
+			ElseIf cadin.EstaNoCadin(cliente) Then
+				Console.WriteLine("Cliente " & Convert.ToString(cliente.Nome) & " possui restrição no CADIN")
+				ConcederEmprestimo = False
+			ElseIf Not limite.PossuiLimiteCredito(cliente, valor) Then
+				Console.WriteLine("O Cliente {0} possui limite de crédido inferior a {1:C}" & vbLf & " ", cliente.Nome, valor)
+				ConcederEmprestimo = False
+			End If
+			'true-concede  false-nega
+			Return ConcederEmprestimo
+		End Function
+	End Class
